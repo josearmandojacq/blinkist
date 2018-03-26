@@ -1,6 +1,6 @@
 # blinkist
 
-> A Vue.js project
+> Blinkist Web App using Vuejs and Vuetifyjs
 
 ## Build Setup
 
