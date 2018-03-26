@@ -1,0 +1,28 @@
+[
+  {
+    "_id": 1,
+    "name": "The Myths of Innovation",
+    "author": "Scott Berkun",
+    "image":"https://images.unsplash.com/photo-1485081791449-31e80b36c854?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5737c80079cfcffd0fa0194cc831ac93&auto=format&fit=crop&w=1500&q=80"
+    },
+  {
+    "_id": 2,
+    "name": "Ghost in the Wires",
+    "author": "Kevin Mitnick",
+    "image": "https://images.unsplash.com/photo-1508674861872-a51e06c50c9b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3767d2c709d3b2e3ab9b57f1d3a79dbf&auto=format&fit=crop&w=1000&q=80"  },
+  {
+    "_id": 3,
+    "name": "The Looming Tower",
+    "author": "Lawrence Wright",
+    "image": "https://confessionsofatrolleydolly.files.wordpress.com/2012/09/september-11-2001-911-ground-zero-twin-towers-24-e1477847196775.jpg"  },
+  {
+    "_id": 5,
+    "name": "Becoming Steve Jobs",
+    "author": "Brent Schlender and Rick Tetzeli",
+    "image": "https://9to5mac.files.wordpress.com/2013/06/apple-ceo-steve-jobs-glasses.jpeg"  },
+  {
+    "_id": 6,
+    "name": "Fire and Fury",
+    "author": "Michael Wolff",
+    "image": "http://s.newsweek.com/sites/www.newsweek.com/files/styles/lg/public/2017/06/28/trump-cnn.jpg"  }
+]
