@@ -2,36 +2,34 @@
   <div>
   <header>
     <h1>{{title}}</h1>
-    <div class='library-separator'></div>
+    <div class='library-separator color'></div>
   </header>
-
-  <v-container class="states-container">
-    <v-flex class="spacing">
-      <h3>Currently reading</h3>
-      <div v-for="book in addedBooks" v-bind:key="book._id">
-        <Book :book='book' :removeSelectedBook='removeSelectedBook.bind(this)' :toogleBooksButtons="toogleBooksButtons"/>
-      </div>
-    </v-flex>
-
-    <v-flex class="spacing">
-      <h3>Finished</h3>
-      <div v-for="book in finishedBooks" v-bind:key="book._id">
-        <Book :book='book'/>
-      </div>
-    </v-flex>
-  </v-container>
-
-  <div id="books-container">
-    <h2>You might like</h2>
-    <h3>The community's more read title</h3>
-    <div>
-      <v-container grid-list-md text-xs-center>
-    <div v-for="book in books" v-bind:key="book._id">
-      <Book :book="book"  :addSelectedBooks="addSelectedBooks.bind(this)" />
-    </div>
+  
+  <!-- List all of books added to the library/reading now -->
+  <div class="states-container spacing">
+    <h3 v-bind:class="{color: addedBooks.length >= 1}">Currently reading</h3>
+    <div class='currently-separator color'></div>
+    <v-container grid-list-md text-xs-center class="margin" >
+      <v-layout row wrap >
+        <v-flex xs4 v-for="book in addedBooks" v-bind:key="book._id">
+          <Book :book='book' :removeSelectedBook='removeSelectedBook.bind(this)' :toogleBooksButtons="toogleBooksButtons"/>
+        </v-flex>
+      </v-layout>
     </v-container>
     </div>
-  </div>
+
+  <!-- List all of books -->
+    <div id="books-container">
+      <h2>You might like</h2>
+      <h3>The community's more read title</h3>
+      <v-container grid-list-md text-xs-center class="margin" >
+        <v-layout row wrap >
+          <v-flex xs4 v-for="book in books" v-bind:key="book._id">
+            <Book :book="book"  :addSelectedBooks="addSelectedBooks.bind(this)" />
+          </v-flex>
+        </v-layout >
+      </v-container>
+    </div>
 </div>
 </template>
 
@@ -75,23 +73,36 @@ export default {
 
 <style scoped>
 header > h1{
-  margin: 0 0 30px 5%;
+  margin: 0 0 20px 5%;
 }
 .library-separator {
   width: 90%;
   height: 2px;
-  background-color: #A5CBA2;
+  background-color: #83DF85;
   margin: 0 auto;
 }
+.color{
+  color: #74C775;
+}
+.currently-separator{
+  width: 20%;
+  height: 2px;
+  background-color: #83DF85;
+}
 .states-container{
-  display: flex;
   margin: 0 0 30px 5%;
+}
 
-}
-.spacing{
-  margin-bottom: 30px;
-}
 #books-container{
   margin-left: 5%;
+}
+
+div.states-container.spacing > h3{
+  width: 200px;
+  margin-top: 30px;
+}
+
+.margin{
+  margin: 20px 0 0 0;
 }
 </style>
